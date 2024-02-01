@@ -1,0 +1,106 @@
+:root {
+  --light: lightgray;
+  --dark: rgb(54, 52, 52);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light);
+}
+
+.container {
+  min-width: 100%;
+  min-height: 100vh;
+}
+.uploader {
+  width: fit-content;
+  padding: 0.2em 0.5em;
+  text-align: center;
+  border: 1px solid var(--dark);
+  border-radius: 8px;
+  background-color: var(--dark);
+  color: var(--light);
+  cursor: pointer;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.uploader label {
+  cursor: pointer;
+}
+.uploader input[type="file"] {
+  display: none;
+}
+
+.frame {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1em;
+  margin: auto;
+  margin-top: 1em;
+}
+.display{
+  width: 50%;
+  padding: .5em;
+  text-align: center;
+}
+.display img{
+  width: 50%;
+  max-width: 300px;
+}
+.save-btn{
+  width: 50%;
+  padding: .5em 0em;
+  font-size: 1em;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.editor{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: .5em;
+  min-height: 90vh;
+}
+
+.img-editor{
+  max-width: 200px;
+  margin: .5em;
+  border: 1px solid skyblue;
+  padding: .5em;
+  border-radius: 4px
+}
+
+@media all and (width < 550px) {
+  .frame {
+    flex-direction: column;
+  }
+  .display{
+    width: 100%;
+  }
+  .editor{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .img-editor{
+    max-width: 200px;
+    margin: .5em;
+  }
+}
